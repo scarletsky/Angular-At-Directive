@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    padding: 20px 0;
+}
+
+#container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#textarea {
+    width: 100%;
+    height: auto;
+}
+
+.avatar {
+   border-radius: 500px; 
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.list-at-user {
+    width: 100%;
+    max-width: 198px;
+    position: absolute;
+    background: white;
+    border: 1px solid #a4a4a4;
+    z-index: 10;
+}
+
+.list-at-user li {
+    padding: 8px;
+    height: 66px;
+    border-bottom: 1px solid #a4a4a4;
+    list-style-type: none;
+}
+
+.list-at-user li:hover {
+    cursor: pointer;
+    background: #b9dff4;
+}
+
+.list-at-user li span {
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.list-cur {
+    background: #b9dff4;
+}

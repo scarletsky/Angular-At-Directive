@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+        <script src="app/scripts/caret.js"></script>
+        <script src="app/scripts/at.js"></script>
+        <script src="app/scripts/app.js"></script>
+
+        <link rel="stylesheet" href="app/styles/main.css" />
+    </head>
+    <body ng-controller="mainCtrl">
+        <div id="container">
+            <div id="textarea">
+                <form>
+                    <textarea ng-model="message.content"
+                              ng-trim="false"
+                              rows="5"
+                              cols="100"  
+                              flag="@"
+                              at-user
+                              auto-complete></textarea>
+
+                    <span ng-show="!isAtListHidden" auto-follow="true">
+                        <ul class="list-at-user">
+                            <li ng-repeat="user in users | filter: query.text | limitTo: 5"
+                                ng-click="autoComplete(user)">
+                                <img ng-src="{{ user.image }}" class="avatar pull-left" width="50" height="50">
+                                <span>{{ user.username }}</span>
+                            </li>
+                        </ul>
+                    </span>
+                </form>
+            </div>
+
+<!--             <div id="contenteditable">
+                <form>
+                    <div contenteditable="true">
+                        
+                    </div>
+                </form>
+            </div> -->
+        </div>
+    </body>
+</html>
